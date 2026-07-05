@@ -30,7 +30,6 @@
 <body>
 
 	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
-
 <style>
 @media (max-width: 767px) {
     /* 1. Oculta o botão/tag ouro do topo */
@@ -44,52 +43,59 @@
         display: none !important;
     }
 
-    /* 3. Configura o indicador de rolagem para centralizar e ativar a flutuação */
+    /* 3. CORREÇÃO CRÍTICA DO INDICADOR: Força largura total, zera travas à esquerda e centraliza */
     .scroll-indicator {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        width: 100% !important;
-        position: relative !important;
-        margin-top: 50px !important;
-        bottom: 15px !important;
         
-        /* Aplica a animação: nome, duração (2 segundos), ciclo infinito e movimento suave */
+        width: 100% !important;            /* Ocupa toda a largura horizontal do celular */
+        max-width: 100% !important;
+        position: relative !important;
+        left: 0 !important;                /* Remove qualquer deslocamento para a esquerda */
+        right: 0 !important;
+        margin: 40px auto 0 auto !important; /* Centraliza o bloco usando margens automáticas */
+        padding: 0 !important;
+        text-align: center !important;
+        
+        /* Mantém a animação suave de flutuação */
         animation: flutuarSuave 2s ease-in-out infinite !important;
     }
 
-    /* Oculta setas ou ícones residuais (caso queira manter RIGOROSAMENTE apenas o texto) */
+    /* Oculta estritamente setas ou ícones residuais se houver */
     .scroll-indicator i, 
     .scroll-indicator img {
         display: none !important;
     }
 
-    /* 4. Estiliza o texto: Centralizado, Negrito e Azul Escuro */
+    /* 4. CORREÇÃO DA FONTE: Reduzida para caber perfeitamente em uma linha só e centralizada */
     .scroll-indicator span {
-        display: block !important;
+        display: inline-block !important;  /* Permite que se comporte como bloco alinhável sem quebrar */
         text-align: center !important;
-        margin: 0 auto !important;
-        font-size: 1.2rem !important;
+        width: 100% !important;
         
-        font-weight: 700 !important;      /* Força o Negrito (Bold) */
-        color: #0A4F7A !important;         /* Cor Azul Escuro (padrão do seu tema) */
+        font-size: 1.05rem !important;     /* Tamanho ideal para não quebrar em telas estreitas */
+        font-weight: 700 !important;       /* Mantém o Negrito firme */
+        color: #0A4F7A !important;          /* Tom de azul escuro do seu tema */
+        white-space: nowrap !important;    /* IMPEDE ABSOLUTAMENTE A QUEBRA DE LINHA */
     }
 }
 
-/* 5. Criação do movimento de subir e descer (Animação CSS) */
+/* 5. Animação de flutuação suave (subir e descer) */
 @keyframes flutuarSuave {
     0% {
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Sobe 10 pixels na metade do tempo */
+        transform: translateY(-8px); /* Sobe sutilmente 8px */
     }
     100% {
         transform: translateY(0);
     }
 }
 </style>
+
 
 	
 <!-- Pop-up de Matrículas -->
