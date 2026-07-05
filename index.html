@@ -33,7 +33,7 @@
 
 	<style>
 @media (max-width: 767px) {
-    /* 1. Alinha o container pai para garantir que nada saia do centro */
+    /* 1. Alinha o container pai para garantir que a estrutura fique correta */
     .hero .hero-container {
         display: flex !important;
         flex-direction: column !important;
@@ -52,49 +52,9 @@
         display: none !important;
     }
 
-    /* 4. Configuração e centralização do Indicador de Rolagem (Seta) */
+    /* 4. REMOVE COMPLETAMENTE O INDICADOR DE ROLAGEM (Texto e Seta) NO SMARTPHONE */
     .scroll-indicator {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        
-        width: 100% !important;
-        position: relative !important;
-        left: 0 !important;
-        right: 0 !important;
-        margin: 50px auto 0 auto !important; /* Afasta a seta para baixo do botão principal */
-        padding: 0 !important;
-        text-align: center !important;
-        
-        /* Mantém a animação suave de flutuar para cima e para baixo */
-        animation: flutuarSuave 2s ease-in-out infinite !important;
-    }
-
-    /* REMOVE APENAS O TEXTO "Role para conhecer" NO SMARTPHONE */
-    .scroll-indicator span {
         display: none !important;
-    }
-
-    /* Garante que a seta permaneça visível, centralizada e com tamanho adequado */
-    .scroll-indicator i {
-        display: inline-block !important;
-        font-size: 2rem !important; /* Aumentado levemente para dar bom destaque visual sozinha */
-        color: #0A4F7A !important;  /* Cor Azul Escuro Oficial */
-        margin: 0 auto !important;
-        text-align: center !important;
-    }
-}
-
-/* 5. Animação de flutuação suave (subir e descer) */
-@keyframes flutuarSuave {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px); /* Move a seta suavemente para cima */
-    }
-    100% {
-        transform: translateY(0);
     }
 }
 </style>
