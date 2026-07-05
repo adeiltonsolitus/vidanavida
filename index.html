@@ -31,7 +31,8 @@
 
 	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
 
-	<style>
+	<!-- Estilos unificados para correções no Mobile -->
+<style>
 @media (max-width: 767px) {
     /* 1. Alinha o container pai para garantir que a estrutura fique correta */
     .hero .hero-container {
@@ -66,22 +67,32 @@
         display: none !important;
     }
 
-    /* 5. FORÇA A QUEBRA DE LINHA PRESERVANDO AS CORES ORIGINAIS */
+    /* 5. FORÇA A QUEBRA DE LINHA E BLINDA AS CORES DA IDENTIDADE VISUAL */
     .hero-content h1 {
         font-size: 2.2rem !important;
         line-height: 1.3 !important;
         text-align: center !important;
         margin: 0 auto 1.5rem auto !important;
         display: flex !important;
-        flex-wrap: wrap !important; /* Permite que os elementos quebrem linha */
+        flex-wrap: wrap !important;
         justify-content: center !important;
     }
 
-    /* Força cada br-span a ocupar uma linha inteira e isolada no celular */
-    .hero-content h1 .br-span {
+    /* Força "Instituto" e "Ministerial" a ocuparem linhas próprias, em AZUL ESCURO */
+    .hero-content h1 .br-text {
         flex-basis: 100% !important;
         display: block !important;
         text-align: center !important;
+        font-weight: 700 !important;
+        color: #0d3b66 !important; /* COR AZUL ESCURO DO SEU PRINT */
+    }
+
+    /* Garante que o "Vida na Vida" permaneça em VERMELHO e centralizado abaixo */
+    .hero-content h1 span {
+        display: block !important;
+        text-align: center !important;
+        color: #e63946 !important; /* COR VERMELHA DO SEU PRINT */
+        width: 100% !important;
     }
 
     /* 6. FORÇA O PARÁGRAFO EM 2 LINHAS EXATAS NO SMARTPHONE */
@@ -93,7 +104,7 @@
         display: block !important;
         width: 100% !important;
         white-space: pre-line !important; 
-        line-height: 1.5 !important; /* Corrige a sobreposição do line-height 0.7 */
+        line-height: 1.5 !important;
     }
 }
 </style>
@@ -148,12 +159,14 @@
         <div class="hero-content">
             <span class="hero-tag">Conhecimento Bíblico • Formação Ministerial</span>
             
+            <!-- Mudamos para strong para o seu CSS antigo não pintar tudo de vermelho -->
             <h1>
-                <span class="br-span">Instituto</span> 
-                <span class="br-span">Ministerial</span> 
+                <strong class="br-text">Instituto</strong> 
+                <strong class="br-text">Ministerial</strong> 
                 <span>Vida na Vida</span>
             </h1>
             
+            <!-- Quebra de linha física no código para o smartphone respeitar -->
             <p>O próximo passo da sua jornada
             ministerial começa aqui!</p>
             
