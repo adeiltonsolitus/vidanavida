@@ -30,13 +30,50 @@
 <body>
 
 	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
+
 	<style>
-		@media (max-width: 767px) {
-   		 .hero-content .hero-tag {
+@media (max-width: 767px) {
+    /* 1. Oculta o botão/tag ouro do topo */
+    .hero-content .hero-tag {
         display: none !important;
-   			 }
-			}
-	</style>
+    }
+
+    /* 2. Oculta especificamente a imagem hero.webp no mobile */
+    .hero .hero-image,
+    .hero .hero-logo-main {
+        display: none !important;
+    }
+
+    /* 3. Ajusta o indicador de rolagem para dar destaque apenas ao texto */
+    .scroll-indicator {
+        position: relative !important;
+        bottom: 10px !important;
+        margin-top: 40px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: auto !important;
+    }
+
+    /* Oculta setas ou ícones residuais dentro do indicador de rolagem */
+    .scroll-indicator i, 
+    .scroll-indicator img {
+        display: none !important;
+    }
+
+    /* Garante a correta exibição e leitura do texto de rolagem */
+    .scroll-indicator span {
+        display: block !important;
+        font-size: 1.15rem !important;
+        color: #64748b !important;
+        font-weight: 500 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+}
+</style>
 
 	
 <!-- Pop-up de Matrículas -->
