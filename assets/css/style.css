@@ -3011,3 +3011,50 @@ transform:translateY(-6px);
 .btn-modal-alerta-close:hover {
     background-color: #083e61;
 }
+
+/* ==========================================================================
+   AJUSTE DE LAYOUT INVERSO PARA DISPOSITIVOS MÓVEIS (MOBILE & TABLET)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* Força o grid bidimensional a se transformar em uma única coluna vertical */
+    .course-layout-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem; /* Espaçamento harmônico entre o fim do texto e o início dos cards */
+    }
+
+    /* Garante que a seção de detalhes ocupe a largura total */
+    .course-details {
+        width: 100%;
+    }
+
+    /* Ajusta a barra lateral para se comportar como blocos inferiores de largura total */
+    .course-sidebar {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem; /* Espaço entre os cards de informação */
+    }
+
+    /* Otimização dos Cards Individuais no Mobile */
+    .sidebar-card {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 20px; /* Reduz levemente o recuo para ganhar espaço interno */
+    }
+
+    /* Ajuste dos botões de ação para ocuparem toda a largura da tela do celular,
+       tornando o clique muito mais fácil e anatômico */
+    .btn-enroll-now, 
+    .btn-return-sidebar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 14px;
+        font-size: 1.05rem;
+        box-sizing: border-box;
+        min-height: 48px; /* Altura padrão recomendada para telas de toque */
+    }
+}
