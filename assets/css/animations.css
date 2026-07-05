@@ -1,0 +1,129 @@
+/*==========================================================
+    ANIMAÇÕES DO LOADER
+==========================================================*/
+
+@keyframes loadingBar{
+
+    0%{
+
+        transform:translateX(-120%);
+
+    }
+
+    100%{
+
+        transform:translateX(350%);
+
+    }
+
+}
+
+@keyframes logoFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes floatHero{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.about-image{
+
+    animation:floatImage 8s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.feature-card{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.feature-card.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:.8s ease;
+
+}
+
+
+.cta{
+
+    opacity:0;
+
+    transform:translateY(60px);
+
+}
+
+.cta.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+    transition:1s ease;
+
+}
+

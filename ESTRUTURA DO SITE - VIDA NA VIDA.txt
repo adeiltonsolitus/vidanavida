@@ -1,0 +1,46 @@
+vida-na-vida/
+│
+├── index.html
+│
+├── cursos/
+│   ├── biblia-1.html
+│   ├── lideranca.html
+│   ├── curada-para-curar.html
+│   ├── intercessao.html
+│   ├── capacita-kids.html
+│   ├── midia.html
+│   ├── biblia-2.html
+│   ├── curadas-para-curar-2.html
+│   └── intercessao-2.html
+│
+├── assets/
+│
+│   ├── css/
+│   │   ├── reset.css
+│   │   ├── variables.css
+│   │   ├── style.css
+│   │   ├── animations.css
+│   │   └── responsive.css
+│   │
+│   ├── js/
+│   │   ├── main.js
+│   │   ├── animation.js
+│   │   ├── scroll.js
+│   │   └── cards.js
+│   │
+│   ├── images/
+│   │   ├── logo.png
+│   │   ├── hero.jpg
+│   │   ├── cursos/
+│   │   ├── backgrounds/
+│   │   └── icons/
+│   │
+│   └── fonts/
+│
+├── favicon.ico
+│
+├── robots.txt
+│
+├── sitemap.xml
+│
+└── README.md

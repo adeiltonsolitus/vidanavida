@@ -1,0 +1,164 @@
+/*==========================================================================
+    BREAKPOINT: TABLETS E LAPTOPS (MAX-WIDTH: 992px)
+==========================================================================*/
+@media (max-width: 992px) {
+    .header-container {
+        justify-content: center; /* Mantém a logo perfeitamente centralizada */
+        padding: 15px 0;
+    }
+
+    .hero-container,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .hero-image, .about-image {
+        order: -1; 
+    }
+
+    .courses-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+/*==========================================================================
+    BREAKPOINT: SMARTPHONES (MAX-WIDTH: 768px)
+==========================================================================*/
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonial {
+        padding: 2rem;
+    }
+
+    .slider-btn {
+        display: none;
+    }
+
+    .faq {
+        padding: 4rem 0;
+    }
+
+    .faq-question {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+
+    .footer-map iframe {
+        height: 250px;
+    }
+}
+
+/*==========================================================================
+    MANTER O LOGOTIPO AJUSTADO SEM INTERFERENCIA E REDUZIR NO SMARTPHONE
+==========================================================================*/
+
+
+/* Ajustes para telas móveis (Smartphones) */
+@media (max-width: 768px) {
+    .hero-container {
+        display: flex;
+        flex-direction: column;  /* Empilha o texto e a logo */
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-image {
+        order: 2; /* Garante que ela fique abaixo do texto no mobile */
+    }
+
+    .hero-logo-main {
+        max-height: 220px;       /* Reduz o limite no celular para não ocupar espaço excessivo */
+        width: auto;
+        margin: 0 auto;
+    }
+
+
+/* ==========================================================
+   ALINHAMENTO CENTRALIZADO HERO NO MOBILE
+=========================================================== */
+@media (max-width: 768px) {
+    
+    /* Força o container principal a alinhar tudo em coluna centralizada */
+    .hero-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        padding-top: 2rem;
+    }
+
+    /* Alinha o bloco de textos e garante que os filhos fiquem centralizados */
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Centraliza o container dos botões e os botões dentro dele */
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Centraliza os botões horizontalmente */
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    /* Força o botão a se comportar como bloco centralizado sem quebrar layout */
+    .hero-buttons .btn, 
+    .hero-buttons .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0 auto;       /* Margem automática nas laterais para garantir centralização */
+        width: auto;          /* Mantém o tamanho baseado no texto interno */
+        min-width: 200px;     /* Largura mínima elegante para cliques no celular */
+        padding: 12px 30px;
+    }
+
+    /* Garante a ordem correta: Imagem/Logo vem por último, abaixo do botão */
+    .hero-image {
+        order: 5; 
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-height: 200px;    /* Limita o tamanho conforme o ajuste anterior */
+        width: auto;
+        margin: 0 auto;
+    }
+}
