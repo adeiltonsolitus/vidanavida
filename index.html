@@ -39,6 +39,15 @@
         flex-direction: column !important;
         align-items: center !important;
         width: 100% !important;
+        padding: 0 20px !important;
+    }
+
+    .hero .hero-content {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     /* 2. Oculta o botão/tag ouro do topo */
@@ -52,9 +61,36 @@
         display: none !important;
     }
 
-    /* 4. REMOVE COMPLETAMENTE O INDICADOR DE ROLAGEM (Texto e Seta) NO SMARTPHONE */
+    /* 4. Oculta completamente o indicador de rolagem antigo */
     .scroll-indicator {
         display: none !important;
+    }
+
+    /* 5. CORREÇÃO DO TÍTULO: Força a quebra exata em 3 linhas e centraliza */
+    .hero-content h1 {
+        font-size: 2.2rem !important;
+        line-height: 1.2 !important; /* Ajustado para as 3 linhas ficarem com espaçamento perfeito */
+        text-align: center !important;
+        margin: 0 auto 1.5rem auto !important;
+        max-width: 280px !important; /* Estreita o bloco para forçar a quebra exata das palavras */
+        display: block !important;
+    }
+
+    /* Garante que o "Vida na Vida" também quebre corretamente se necessário */
+    .hero-content h1 span {
+        display: block !important;
+        text-align: center !important;
+    }
+
+    /* 6. CORREÇÃO DO PARÁGRAFO: Força a quebra exata em 2 linhas e centraliza */
+    .hero-content p {
+        font-size: 1.15rem !important;
+        line-height: 1.4 !important; /* Corrige o bug do line-height 0.7 do código original */
+        color: #334155 !important;
+        text-align: center !important;
+        margin: 0 auto 2rem auto !important;
+        max-width: 260px !important; /* Estreita o bloco para forçar a quebra no meio da frase */
+        display: block !important;
     }
 }
 </style>
