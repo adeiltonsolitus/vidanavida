@@ -584,6 +584,88 @@
 
 <script src="assets/js/animation.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    function corrigirLayoutMobile() {
+        // Executa a correção apenas se a tela for de celular/tablet (menor que 768px)
+        if (window.innerWidth <= 768) {
+            
+            // 1. Localiza os elementos principais pelos seletores comuns
+            const logoTopo = document.querySelector(".header, .header-container, .logo");
+            const badgeDourado = document.querySelector(".course-badge, [class*='badge']");
+            const tituloH1 = document.querySelector("h1, .main-title");
+            const fraseJornada = document.querySelector("h1 + p, .main-subtitle, p[class*='jornada']");
+            const botaoCursos = document.querySelector(".btn-main, a[href*='#cursos']");
+            const logoCruz = document.querySelector("img[src*='logo'], .logo-home-footer");
+            const textoRole = document.querySelector(".text-scroll, p[class*='role']");
+
+            // 2. Aplica a limpeza de estilos diretamente na tag (sobrescrevendo o CSS antigo)
+            if (logoTopo) {
+                logoTopo.style.setProperty("position", "relative", "important");
+                logoTopo.style.setProperty("display", "flex", "important");
+                logoTopo.style.setProperty("height", "auto", "important");
+                logoTopo.style.setProperty("margin", "10px auto", "important");
+            }
+
+            if (badgeDourado) {
+                badgeDourado.style.setProperty("position", "relative", "important");
+                badgeDourado.style.setProperty("display", "block", "important");
+                badgeDourado.style.setProperty("width", "90%", "important");
+                badgeDourado.style.setProperty("margin", "15px auto", "important");
+                badgeDourado.style.setProperty("top", "auto", "important");
+                badgeDourado.style.setProperty("transform", "none", "important");
+            }
+
+            if (tituloH1) {
+                tituloH1.style.setProperty("position", "relative", "important");
+                tituloH1.style.setProperty("display", "block", "important");
+                tituloH1.style.setProperty("margin", "20px auto 10px auto", "important");
+                tituloH1.style.setProperty("height", "auto", "important");
+                tituloH1.style.setProperty("text-align", "center", "important");
+            }
+
+            if (fraseJornada) {
+                fraseJornada.style.setProperty("position", "relative", "important");
+                fraseJornada.style.setProperty("display", "block", "important");
+                fraseJornada.style.setProperty("text-align", "center", "important"); // Centraliza a jornada
+                fraseJornada.style.setProperty("width", "90%", "important");
+                fraseJornada.style.setProperty("margin", "20px auto", "important");
+                fraseJornada.style.setProperty("height", "auto", "important");
+            }
+
+            if (botaoCursos) {
+                botaoCursos.style.setProperty("position", "relative", "important");
+                botaoCursos.style.setProperty("display", "flex", "important");
+                botaoCursos.style.setProperty("margin", "20px auto", "important");
+                botaoCursos.style.setProperty("width", "80%", "important");
+            }
+
+            if (logoCruz) {
+                logoCruz.style.setProperty("position", "relative", "important");
+                logoCruz.style.setProperty("display", "block", "important");
+                logoCruz.style.setProperty("margin", "40px auto 10px auto", "important"); // Empurra a logo para baixo
+                logoCruz.style.setProperty("top", "auto", "important");
+                logoCruz.style.setProperty("transform", "none", "important");
+                logoCruz.style.setProperty("width", "160px", "important");
+            }
+
+            if (textoRole) {
+                textoRole.style.setProperty("position", "relative", "important");
+                textoRole.style.setProperty("display", "block", "important");
+                textoRole.style.setProperty("margin", "10px auto 40px auto", "important");
+                textoRole.style.setProperty("text-align", "center", "important");
+                textoRole.style.setProperty("top", "auto", "important");
+            }
+        }
+    }
+
+    // Executa ao carregar e se caso o usuário virar a tela do aparelho
+    corrigirLayoutMobile();
+    window.addEventListener("resize", corrigirLayoutMobile);
+});
+</script>
+	
 </body>
 
 <script>
