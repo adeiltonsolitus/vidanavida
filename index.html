@@ -33,46 +33,18 @@
 
 	<style>
 @media (max-width: 767px) {
-    /* força o container pai a não esmagar os elementos nas laterais */
-    .hero .hero-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
+    /* 1. Oculta o botão/tag ouro do topo */
+    .hero-content .hero-tag {
+        display: none !important;
     }
 
-    /* Correção do Indicador de Rolagem */
-    .scroll-indicator {
-        display: flex !important;
-        flex-direction: column !important; /* Mantém o texto acima da seta */
-        align-items: center !important;
-        justify-content: center !important;
-        
-        width: 100% !important;            /* Ocupa toda a largura da tela do celular */
-        position: relative !important;     /* Remove o travamento absoluto que jogava para a esquerda */
-        left: 0 !important;
-        right: 0 !important;
-        margin: 40px auto 0 auto !important; /* Centraliza horizontalmente e afasta do botão de cima */
-        text-align: center !important;
-    }
-
-    /* Garante o texto centralizado e sem quebra de linha */
-    .scroll-indicator span {
-        display: block !important;
-        text-align: center !important;
-        width: 100% !important;
-        white-space: nowrap !important;    /* Proíbe terminantemente o texto de quebrar linha */
-        font-size: 1.1rem !important;      /* Tamanho ideal para telas de smartphones */
-    }
-
-    /* Garante que a seta abaixo do texto também acompanhe a centralização */
-    .scroll-indicator i {
-        display: inline-block !important;
-        text-align: center !important;
-        margin-top: 8px !important;
+    /* 2. Oculta a imagem hero.webp no mobile */
+    .hero .hero-image,
+    .hero .hero-logo-main {
+        display: none !important;
     }
 }
-</style>
+	</style>
 	
 <!-- Pop-up de Matrículas -->
 <div id="popup-matricula" class="popup-wrapper" style="display: none;">
