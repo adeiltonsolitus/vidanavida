@@ -165,6 +165,97 @@
 
 
 /* ==========================================================================
+   CORREÇÃO DE RESPONSIVIDADE PARA POP-UPS E MODAIS (MOBILE & TABLET)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. Correção dos Wrappers (Fundo escuro) */
+    .popup-wrapper, 
+    .modal-alerta-wrapper {
+        padding: 12px;                      /* Diminui o recuo nas bordas físicas do aparelho */
+        align-items: flex-start;            /* Alinha o card no topo para não sumir se a tela for baixa */
+        overflow-y: auto;                   /* Habilita rolagem vertical se o card for maior que a tela */
+        -webkit-overflow-scrolling: touch;  /* Garante rolagem suave e nativa no iOS (Safari) */
+    }
+
+    /* 2. Ajuste dos Cards (Pop-up da Index e Modal de Alerta) */
+    .popup-card, 
+    .modal-alerta-card {
+        padding: 20px 15px;                 /* Reduz o espaçamento interno para ganhar área útil */
+        margin-top: 30px;                   /* Margem superior para não colar na barra do navegador */
+        margin-bottom: 30px;
+        max-width: 100%;                    /* Garante que o card nunca ultrapasse a largura do device */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Suaviza a sombra em telas menores */
+    }
+
+    /* 3. Títulos e Textos Dinâmicos */
+    .popup-body h2 {
+        font-size: 1.35rem;                 /* Redução escalar para não quebrar em 3 linhas */
+    }
+
+    .modal-alerta-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .popup-dates {
+        font-size: 0.95rem;                 /* Ajusta a tarja de datas para caber inteira no mobile */
+        padding: 6px 12px;
+        width: 100%;                        /* Força a tarja a ocupar a largura interna, evitando quebra errada */
+        box-sizing: border-box;
+    }
+
+    .popup-text, 
+    .modal-alerta-body {
+        font-size: 0.88rem;                 /* Tamanho otimizado para leitura em telas portáteis */
+        line-height: 1.5;
+        text-align: left;                   /* Alinhamento à esquerda evita espaçamentos bizarros do "justify" no mobile */
+    }
+
+    /* 4. Otimização de Botões e Checkbox para Toque (Acessibilidade) */
+    .btn-popup-primary, 
+    .btn-modal-alerta-close {
+        padding: 14px 20px;                 /* Aumenta a altura do botão para facilitar o clique com o polegar */
+        font-size: 1rem;
+        min-height: 48px;                   /* Altura mínima recomendada pela Google para alvos de toque */
+    }
+
+    .popup-checkbox-wrapper {
+        padding: 8px 0;                     /* Afasta o checkbox do botão para evitar cliques errados */
+        justify-content: flex-start;        /* Alinha à esquerda para melhor leitura em telas estreitas */
+    }
+
+    .popup-checkbox-wrapper input[type="checkbox"] {
+        width: 20px;                        /* Aumenta o tamanho do quadrado do checkbox para o toque */
+        height: 20px;
+        min-width: 20px;                    /* Impede que o flexbox esmague o input */
+    }
+
+    .popup-checkbox-wrapper label {
+        font-size: 0.85rem;
+        line-height: 1.3;
+        text-align: left;
+    }
+
+    /* 5. Botão de Fechar Superior (X) */
+    .popup-close-x {
+        top: 10px;
+        right: 15px;
+        font-size: 32px;                    /* Aumenta o tamanho visual do 'X' para fechamento rápido */
+        padding: 10px;                      /* Cria uma área invisível de clique maior ao redor do 'X' */
+    }
+}
+
+/* Ajuste específico para Smartwatch ou celulares extremamente estreitos (abaixo de 320px) */
+@media (max-width: 320px) {
+    .popup-body h2 {
+        font-size: 1.15rem;
+    }
+    .popup-dates {
+        font-size: 0.85rem;
+    }
+}
+
+/* ==========================================================================
    CORREÇÃO CRÍTICA DE RESPONSIVIDADE (DESTRUIÇÃO DO GRID NO MOBILE)
    ========================================================================== */
 
@@ -222,90 +313,3 @@
         font-size: 1.1rem !important;
     }
 }
-
-/* ==========================================================================
-   CORREÇÃO CRÍTICA DE RESPONSIVIDADE - PÁGINA INICIAL (INDEX.HTML)
-   ========================================================================== */
-
-@media screen and (max-width: 768px) {
-    
-    /* 1. Corrige o Banner Dourado do Topo para não esmagar o texto */
-    /* REMOVE qualquer height fixo e permite que o bloco cresça conforme o texto se ajusta */
-    .course-badge,
-    div[class*="badge"],
-    div[class*="banner"],
-    .header-center + div { 
-        height: auto !important;
-        min-height: auto !important;
-        padding: 12px 15px !important;
-        margin: 10px auto !important;
-        width: 90% !important;
-        max-width: 100% !important;
-        display: block !important;
-    }
-
-    /* 2. Força os Títulos Principais a respirarem, sem sobreposição */
-    h1, .main-title, div > h1 {
-        font-size: 1.8rem !important; /* Reduz levemente o tamanho no mobile para não quebrar feio */
-        line-height: 1.3 !important;
-        margin-top: 1.5rem !important;
-        margin-bottom: 1rem !important;
-        height: auto !important;
-    }
-
-    /* 3. CORREÇÃO DA FRASE SOBREPOSTA: "O próximo passo da sua jornada..." */
-    /* Força o parágrafo a se comportar como um bloco isolado e empurrar o botão para baixo */
-    h1 + p, 
-    .main-subtitle,
-    p[class*="jornada"] {
-        display: block !important;
-        position: relative !important;
-        height: auto !important;
-        margin: 1.5rem auto !important;
-        padding: 0 15px !important;
-        line-height: 1.5 !important;
-        font-size: 1.1rem !important;
-        z-index: 10 !important;
-    }
-
-    /* 4. Corrige os botões da Página Inicial ("Escolha seu Curso") */
-    /* Impede que o botão suba ou fique espremido entre os textos */
-    .btn-main,
-    a[href*="cursos"],
-    a[class*="btn"] {
-        display: inline-flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        position: relative !important;
-        margin: 1.5rem auto !important;
-        width: 85% !important;
-        max-width: 320px !important;
-        min-height: 48px !important;
-        height: auto !important;
-    }
-
-    /* 5. CORREÇÃO DO TEXTO SOBREPOSTO COM A LOGO: "Role para conhecer" */
-    /* Força a imagem grande de baixo a se isolar e empurrar qualquer texto complementar */
-    img[src*="logo"], 
-    .logo-home-footer,
-    picture > img {
-        display: block !important;
-        margin: 2rem auto 1rem auto !important;
-        max-width: 80% !important;
-        height: auto !important;
-        position: relative !important;
-    }
-
-    /* Garante que o texto de instrução fique abaixo ou acima de forma limpa */
-    .text-scroll,
-    p[class*="role"] {
-        display: block !important;
-        position: relative !important;
-        margin-top: 1rem !important;
-        margin-bottom: 2rem !important;
-        height: auto !important;
-        font-size: 1rem !important;
-        color: #64748b !important;
-    }
-}
-
