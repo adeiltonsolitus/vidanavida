@@ -32,13 +32,19 @@
 	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
 
 	<style>
-@media (max-width: 767px) {
+	@media (max-width: 767px) {
     /* 1. Oculta o botão/tag ouro do topo */
     .hero-content .hero-tag {
         display: none !important;
     }
-   }
 
+    /* 2. Oculta a imagem hero.webp no mobile */
+    .hero .hero-image,
+    .hero .hero-logo-main {
+        display: none !important;
+    }
+}
+		
 	</style>
 
 	
