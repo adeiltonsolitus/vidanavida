@@ -162,3 +162,63 @@
         margin: 0 auto;
     }
 }
+
+
+/* ==========================================================================
+   CORREÇÃO CRÍTICA DE RESPONSIVIDADE (DESTRUIÇÃO DO GRID NO MOBILE)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. Força o container principal a virar uma coluna única e limpa */
+    .course-layout-grid {
+        display: block !important; /* Desativa o Grid que está espremendo a tela */
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 2. Força o bloco de texto (esquerda) a ocupar a largura total e ficar no TOPO */
+    .course-details {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 2.5rem !important; /* Cria um espaçamento elegante antes de começarem os cards */
+        float: none !important;
+    }
+
+    /* 3. Força a barra lateral de informações (direita) a ir totalmente para BAIXO */
+    .course-sidebar {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        float: none !important;
+        margin-top: 2rem !important;
+    }
+
+    /* 4. Ajusta todos os cards internos para preencherem o celular sem cortar nas laterais */
+    .sidebar-card, 
+    .price-card-box, 
+    .date-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-bottom: 1.25rem !important; /* Espaço entre um card e outro */
+    }
+
+    /* 5. Ajusta os botões de inscrição e retorno para ocuparem a largura total do dedo */
+    .btn-enroll-now, 
+    .btn-return-sidebar {
+        display: flex !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        justify-content: center !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+        margin: 1rem 0 !important;
+        padding: 15px !important;
+        font-size: 1.1rem !important;
+    }
+}
