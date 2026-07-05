@@ -32,38 +32,8 @@
 	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
 	<style>
 @media (max-width: 767px) {
-    /* 1. Oculta o botão/tag ouro do topo */
     .hero-content .hero-tag {
         display: none !important;
-    }
-
-    /* 2. Remove a imagem gigante que quebra o layout no mobile (hero-image) */
-    .hero .hero-image {
-        display: none !important;
-    }
-
-    /* 3. Ajusta o indicador de rolagem para dar destaque apenas ao texto */
-    .scroll-indicator {
-        position: relative !important;
-        bottom: 10px !important;
-        margin-top: 30px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Oculta qualquer ícone ou seta residual para deixar APENAS o texto */
-    .scroll-indicator i, 
-    .scroll-indicator img {
-        display: none !important;
-    }
-
-    .scroll-indicator span {
-        display: block !important;
-        font-size: 1.1rem !important;
-        color: #64748b !important;
-        font-weight: 500 !important;
-        text-align: center !important;
     }
 }
 </style>
