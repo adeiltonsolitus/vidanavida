@@ -31,8 +31,8 @@
 
 	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
 
-	<style>
-	@media (max-width: 767px) {
+<style>
+@media (max-width: 767px) {
     /* 1. Oculta o botão/tag ouro do topo */
     .hero-content .hero-tag {
         display: none !important;
@@ -43,9 +43,53 @@
     .hero .hero-logo-main {
         display: none !important;
     }
+
+    /* 3. Configura o indicador de rolagem para centralizar e ativar a flutuação */
+    .scroll-indicator {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        position: relative !important;
+        margin-top: 50px !important;
+        bottom: 15px !important;
+        
+        /* Aplica a animação: nome, duração (2 segundos), ciclo infinito e movimento suave */
+        animation: flutuarSuave 2s ease-in-out infinite !important;
+    }
+
+    /* Oculta setas ou ícones residuais (caso queira manter RIGOROSAMENTE apenas o texto) */
+    .scroll-indicator i, 
+    .scroll-indicator img {
+        display: none !important;
+    }
+
+    /* 4. Estiliza o texto: Centralizado, Negrito e Azul Escuro */
+    .scroll-indicator span {
+        display: block !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        font-size: 1.2rem !important;
+        
+        font-weight: 700 !important;      /* Força o Negrito (Bold) */
+        color: #0A4F7A !important;         /* Cor Azul Escuro (padrão do seu tema) */
+    }
 }
-		
-	</style>
+
+/* 5. Criação do movimento de subir e descer (Animação CSS) */
+@keyframes flutuarSuave {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px); /* Sobe 10 pixels na metade do tempo */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+</style>
 
 	
 <!-- Pop-up de Matrículas -->
