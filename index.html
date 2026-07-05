@@ -66,31 +66,35 @@
         display: none !important;
     }
 
-    /* 5. CORREÇÃO DO TÍTULO: Força a quebra exata em 3 linhas e centraliza */
+    /* 5. FORÇA O TÍTULO EM 3 LINHAS INDEPENDENTES */
     .hero-content h1 {
         font-size: 2.2rem !important;
-        line-height: 1.2 !important; /* Ajustado para as 3 linhas ficarem com espaçamento perfeito */
+        line-height: 1.3 !important;
         text-align: center !important;
         margin: 0 auto 1.5rem auto !important;
-        max-width: 280px !important; /* Estreita o bloco para forçar a quebra exata das palavras */
         display: block !important;
+        width: 100% !important;
     }
 
-    /* Garante que o "Vida na Vida" também quebre corretamente se necessário */
+    /* Transforma cada pedaço em um bloco isolado que ocupa a linha toda */
     .hero-content h1 span {
         display: block !important;
         text-align: center !important;
+        width: 100% !important;
     }
 
-    /* 6. CORREÇÃO DO PARÁGRAFO: Força a quebra exata em 2 linhas e centraliza */
+    /* 6. FORÇA O PARÁGRAFO EM 2 LINHAS EXATAS NO SMARTPHONE */
     .hero-content p {
         font-size: 1.15rem !important;
-        line-height: 1.4 !important; /* Corrige o bug do line-height 0.7 do código original */
         color: #334155 !important;
         text-align: center !important;
         margin: 0 auto 2rem auto !important;
-        max-width: 260px !important; /* Estreita o bloco para forçar a quebra no meio da frase */
         display: block !important;
+        width: 100% !important;
+        
+        /* Esta propriedade faz o CSS respeitar quebras de linha escritas textualmente */
+        white-space: pre-line !important; 
+        line-height: 1.5 !important;
     }
 }
 </style>
@@ -141,22 +145,25 @@
 <section class="hero" id="inicio">
     <div class="hero-background"></div>
     <div class="container hero-container">
+        
         <div class="hero-content">
             <span class="hero-tag">Conhecimento Bíblico • Formação Ministerial</span>
-            <h1>Instituto Ministerial <span>Vida na Vida</span></h1>
-            <p style="font-size: 1.1rem; line-height: 0.8; color: #334155; margin-bottom: 1rem; text-align: center;">
-			O próximo passo da sua jornada ministerial começa aqui!</p>
+            
+            <h1><span>INSTITUTO</span> <span>MINISTERIAL</span> <span>Vida na Vida</span></h1>
+            
+            <p>O próximo passo da sua jornada
+            ministerial começa aqui!</p>
+            
             <div class="hero-buttons">
                 <a href="#cursos" class="btn btn-primary">Escolha seu Curso</a>
             </div>
         </div>
+        
         <div class="hero-image">
-    <img
-        src="assets/images/hero.webp"
-        alt="Instituto Vida na Vida"
-        class="hero-logo-main">
-</div>
+            <img src="assets/images/hero.webp" alt="Instituto Vida na Vida" class="hero-logo-main">
+        </div>
     </div>
+    
     <div class="scroll-indicator">
         <span>Role para conhecer</span>
         <i class="fa-solid fa-angle-down"></i>
