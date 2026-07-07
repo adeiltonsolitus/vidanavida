@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/animations.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-   
+
     <title>Instituto Ministerial Vida na Vida | Cursos Bíblicos</title>
     <meta name="description" content="Cursos de formação bíblica e ministerial do Instituto Vida na Vida.">
     <meta name="keywords" content="curso bíblico, teologia, instituto bíblico, escola ministerial">
@@ -24,508 +25,576 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
-	<!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
+    <!-- IMPLEMENTEI PARA OCULTAR BOTÃO OURO QUANDO ABRIR NO SMARTPHONE-->
 
-	<!-- Estilos unificados para correções no Mobile -->
-<style>
+    <!-- Estilos unificados para correções no Mobile -->
+    <style>
+        /*-- DAQUI PARA BAIXO É O STYLE ANTES DE CORRIGIR O POP-UP INSCRIÇÃO CURSO */
 
-	/*-- DAQUI PARA BAIXO É O STYLE ANTES DE CORRIGIR O POP-UP INSCRIÇÃO CURSO */
-	
-@media (max-width: 767px) {
-    /* 1. Alinha o container pai para garantir que a estrutura fique correta */
-    .hero .hero-container {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        width: 100% !important;
-        padding: 0 20px !important;
-    }
+        @media (max-width: 767px) {
 
-    .hero .hero-content {
-        width: 100% !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-    }
+            /* 1. Alinha o container pai para garantir que a estrutura fique correta */
+            .hero .hero-container {
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100% !important;
+                padding: 0 20px !important;
+            }
 
-    /* 2. Oculta o botão/tag ouro do topo */
-    .hero-content .hero-tag {
-        display: none !important;
-    }
+            .hero .hero-content {
+                width: 100% !important;
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                text-align: center !important;
+            }
 
-    /* 3. Oculta a imagem hero.webp no mobile */
-    .hero .hero-image,
-    .hero .hero-logo-main {
-        display: none !important;
-    }
+            /* 2. Oculta o botão/tag ouro do topo */
+            .hero-content .hero-tag {
+                display: none !important;
+            }
 
-    /* 4. Oculta completamente o indicador de rolagem antigo */
-    .scroll-indicator {
-        display: none !important;
-    }
+            /* 3. Oculta a imagem hero.webp no mobile */
+            .hero .hero-image,
+            .hero .hero-logo-main {
+                display: none !important;
+            }
 
-    /* 5. FORÇA A QUEBRA DE LINHA E BLINDA AS CORES DA IDENTIDADE VISUAL */
-    .hero-content h1 {
-        font-size: 2.2rem !important;
-        line-height: 1.3 !important;
-        text-align: center !important;
-        margin: 0 auto 1.5rem auto !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
+            /* 4. Oculta completamente o indicador de rolagem antigo */
+            .scroll-indicator {
+                display: none !important;
+            }
 
-    /* Força "Instituto" e "Ministerial" a ocuparem linhas próprias, em AZUL ESCURO */
-    .hero-content h1 .br-text {
-        flex-basis: 100% !important;
-        display: block !important;
-        text-align: center !important;
-        font-weight: 700 !important;
-        color: #0d3b66 !important; /* COR AZUL ESCURO DO SEU PRINT */
-    }
+            /* 5. FORÇA A QUEBRA DE LINHA E BLINDA AS CORES DA IDENTIDADE VISUAL */
+            .hero-content h1 {
+                font-size: 2.2rem !important;
+                line-height: 1.3 !important;
+                text-align: center !important;
+                margin: 0 auto 1.5rem auto !important;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
 
-    /* Garante que o "Vida na Vida" permaneça em VERMELHO e centralizado abaixo */
-    .hero-content h1 span {
-        display: block !important;
-        text-align: center !important;
-        color: #e63946 !important; /* COR VERMELHA DO SEU PRINT */
-        width: 100% !important;
-    }
+            /* Força "Instituto" e "Ministerial" a ocuparem linhas próprias, em AZUL ESCURO */
+            .hero-content h1 .br-text {
+                flex-basis: 100% !important;
+                display: block !important;
+                text-align: center !important;
+                font-weight: 700 !important;
+                color: #0d3b66 !important;
+                /* COR AZUL ESCURO DO SEU PRINT */
+            }
 
-    /* 6. FORÇA O PARÁGRAFO EM 2 LINHAS EXATAS NO SMARTPHONE */
-    .hero-content p {
-        font-size: 1.15rem !important;
-        color: #334155 !important;
-        text-align: center !important;
-        margin: 0 auto 2rem auto !important;
-        display: block !important;
-        width: 100% !important;
-        white-space: pre-line !important; 
-        line-height: 1.5 !important;
-    }
-}
-</style>
-	
-<!-- Pop-up de Matrículas -->
-<div id="popup-matricula" class="popup-wrapper" style="display: none;">
-    <div class="popup-card">
-        <button id="btn-close-popup" class="popup-close-x" aria-label="Fechar">&times;</button>
-        
-        <div class="popup-header">
-            <i class="fa-solid fa-calendar-days"></i>
-            <span>AVISO IMPORTANTE</span>
-        </div>
-        
-        <div class="popup-body">
-            <h2>Período de Matrículas</h2>
-            <p class="popup-dates">12 de Julho à 31 de Julho de 2026</p>
-            <p class="popup-text">Enquanto o período de inscrição não começa, aproveite para conhecer o nosso instituto, explorar a grade de cursos e navegar pelo nosso site.</p>
-        </div>
-        
-        <div class="popup-footer">
-            <button id="btn-entendi-popup" class="btn-popup-primary">Conhecer o Site</button>
-            
-            <div class="popup-checkbox-wrapper">
-                <input type="checkbox" id="chk-dont-show-again">
-                <label for="chk-dont-show-again">Não exibir mais este aviso nesta sessão</label>
+            /* Garante que o "Vida na Vida" permaneça em VERMELHO e centralizado abaixo */
+            .hero-content h1 span {
+                display: block !important;
+                text-align: center !important;
+                color: #e63946 !important;
+                /* COR VERMELHA DO SEU PRINT */
+                width: 100% !important;
+            }
+
+            /* 6. FORÇA O PARÁGRAFO EM 2 LINHAS EXATAS NO SMARTPHONE */
+            .hero-content p {
+                font-size: 1.15rem !important;
+                color: #334155 !important;
+                text-align: center !important;
+                margin: 0 auto 2rem auto !important;
+                display: block !important;
+                width: 100% !important;
+                white-space: pre-line !important;
+                line-height: 1.5 !important;
+            }
+        }
+    </style>
+
+    <!-- Pop-up de Matrículas -->
+    <div id="popup-matricula" class="popup-wrapper" style="display: none;">
+        <div class="popup-card">
+            <button id="btn-close-popup" class="popup-close-x" aria-label="Fechar">&times;</button>
+
+            <div class="popup-header">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>AVISO IMPORTANTE</span>
+            </div>
+
+            <div class="popup-body">
+                <h2>Período de Matrículas</h2>
+                <p class="popup-dates">12 de Julho à 31 de Julho de 2026</p>
+                <p class="popup-text">Enquanto o período de inscrição não começa, aproveite para conhecer o nosso
+                    instituto, explorar a grade de cursos e navegar pelo nosso site.</p>
+            </div>
+
+            <div class="popup-footer">
+                <button id="btn-entendi-popup" class="btn-popup-primary">Conhecer o Site</button>
+
+                <div class="popup-checkbox-wrapper">
+                    <input type="checkbox" id="chk-dont-show-again">
+                    <label for="chk-dont-show-again">Não exibir mais este aviso nesta sessão</label>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div id="loader">
-    <div class="loader-container">
-        <img src="assets/images/logo.png" alt="Instituto Ministerial Vida na Vida" class="loader-logo">
-        <div class="loader-line"><span></span></div>
-        <p class="loader-text">Preparando sua experiência...</p>
+    <div id="loader">
+        <div class="loader-container">
+            <img src="assets/images/logo.png" alt="Instituto Ministerial Vida na Vida" class="loader-logo">
+            <div class="loader-line"><span></span></div>
+            <p class="loader-text">Preparando sua experiência...</p>
+        </div>
     </div>
-</div>
 
-<header class="header" id="header">
-    <div class="container header-container header-center">
-        <a href="index.html" class="logo">
-            <img src="assets/images/logo.png" alt="Instituto Ministerial Vida na Vida">
-        </a>
-    </div>
-</header>
+    <header class="header" id="header">
+        <div class="container header-container header-center">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo.png" alt="Instituto Ministerial Vida na Vida">
+            </a>
+        </div>
+    </header>
 
-<section class="hero" id="inicio">
-    <div class="hero-background"></div>
-    <div class="container hero-container">
-        
-        <div class="hero-content">
-            <span class="hero-tag">Conhecimento Bíblico • Formação Ministerial</span>
-            
-            <!-- Mudamos para strong para o seu CSS antigo não pintar tudo de vermelho -->
-            <h1>
-                <strong class="br-text">Instituto</strong> 
-                <strong class="br-text">Ministerial</strong> 
-                <span>Vida na Vida</span>
-            </h1>
-            
-            <!-- Quebra de linha física no código para o smartphone respeitar --> <!-- ENTREI COM A LINHA P STYLE FONT SIZE -->
-			<p style="font-size: 1.5rem; line-height: 1,5; color: #334155; margin-bottom: 1rem; text-align:;">
-            <p>O próximo passo da sua jornada
-            ministerial começa aqui!</p>
-            
-            <div class="hero-buttons">
-                <a href="#cursos" class="btn btn-primary">Role para conhecer o site ou Escolha aqui o seu Curso</a>
+    <section class="hero" id="inicio">
+        <div class="hero-background"></div>
+        <div class="container hero-container">
+
+            <div class="hero-content">
+                <span class="hero-tag">Conhecimento Bíblico • Formação Ministerial</span>
+
+                <!-- Mudamos para strong para o seu CSS antigo não pintar tudo de vermelho -->
+                <h1>
+                    <strong class="br-text">Instituto</strong>
+                    <strong class="br-text">Ministerial</strong>
+                    <span>Vida na Vida</span>
+                </h1>
+
+                <!-- Quebra de linha física no código para o smartphone respeitar -->
+                <!-- ENTREI COM A LINHA P STYLE FONT SIZE -->
+                <p style="font-size: 1.5rem; line-height: 1,5; color: #334155; margin-bottom: 1rem; text-align:;">
+                <p>O próximo passo da sua jornada
+                    ministerial começa aqui!</p>
+
+                <div class="hero-buttons">
+                    <a href="#cursos" class="btn btn-primary">Role para conhecer o site ou Escolha aqui o seu Curso</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="assets/images/hero.webp" alt="Instituto Vida na Vida" class="hero-logo-main">
             </div>
         </div>
-        
-        <div class="hero-image">
-            <img src="assets/images/hero.webp" alt="Instituto Vida na Vida" class="hero-logo-main">
-        </div>
-    </div>
-    
-    <div class="scroll-indicator">
-        <span>Role para conhecer</span>
-        <i class="fa-solid fa-angle-down"></i>
-    </div>
-</section>
 
-<!-- ==========================================================
+        <div class="scroll-indicator">
+            <span>Role para conhecer</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </section>
+
+    <!-- ==========================================================
      SOBRE O INSTITUTO (Com Botão de Pop-up Dinâmico)
 =========================================================== -->
-<section class="about" id="instituto">
-    <div class="container">
-        <div class="about-grid">
-            
-            <!-- Imagem Reduzida via classe CSS -->
-            <div class="about-image about-image-reduced">
-                <img src="assets/images/instituto.jpg" alt="Instituto Ministerial Vida na Vida">
-            </div>
-            
-            <div class="about-content">
-                <span class="section-tag">Quem Somos</h3></span>
-                <h2>Instituto Ministerial <span>Vida na Vida</span></h2>
-                <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
-						O Instituto Vida na Vida nasceu para preparar pessoas para servir a Deus com amor, excelência e compromisso. Inspirado pela visão da Pastora Sônia Resende, tem como propósito capacitar vidas por meio do ensino da Palavra, do desenvolvimento ministerial e da formação de discípulos comprometidos com o Reino de Deus.
-				</p>
-    
-				<p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
-						Desde a criação da Escola Ministerial, em 2 de agosto de 2025, o instituto oferece cursos gratuitos e acessíveis, ministrados por voluntários, promovendo conhecimento, crescimento espiritual e preparo para o serviço cristão.
-				</p>
-    
-    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
-        Mais do que uma escola, somos um centro de formação que prepara vidas para cuidar de vidas, fortalecendo a Igreja e contribuindo para a expansão do Reino de Deus.
-    </p>
-                <!-- Novo Bloco: Card Único que funciona como Botão para o Pop-up -->
-                <button type="button" class="mvv-trigger-btn" id="openMvvModal">
-                    <span class="mvv-item"><i class="fa-solid fa-circle-plus"></i> Missão</span>
-                    <span class="mvv-divider">|</span>
-                    <span class="mvv-item"><i class="fa-solid fa-lightbulb"></i> Visão</span>
-                    <span class="mvv-divider">|</span>
-                    <span class="mvv-item"><i class="fa-solid fa-heart"></i> Valores</span>
-                </button>
-            </div>
+    <section class="about" id="instituto">
+        <div class="container">
+            <div class="about-grid">
 
-        </div>
-    </div>
-	
-	<div id="mvvModal" class="mvv-modal">
-    <div class="mvv-modal-content">
-        <button class="mvv-modal-close" id="closeMvvModal" aria-label="Fechar Pop-up">&times;</button>
-        
-        <h2 class="modal-main-title">Diretrizes Institucionais</h2>
-        
-        <div class="modal-cards-container">
-            <div class="modal-card-item">
-                <div class="modal-card-icon">
-                    <i class="fa-solid fa-cross"></i>
+                <!-- Imagem Reduzida via classe CSS -->
+                <div class="about-image about-image-reduced">
+                    <img src="assets/images/instituto.jpg" alt="Instituto Ministerial Vida na Vida">
                 </div>
-                <div class="modal-card-text">
-                    <h3>Missão</h3>
-                    <p>Capacitar pessoas para cuidar de vidas e servir ao Reino de Deus, fundamentadas na Palavra, desenvolvendo habilidades ministeriais e uma vida profunda com Deus, por meio de cursos gratuitos ministrados por voluntários da igreja.</p>
-                </div>
-            </div>
 
-            <div class="modal-card-item">
-                <div class="modal-card-icon">
-                    <i class="fa-solid fa-lightbulb"></i>
-                </div>
-                <div class="modal-card-text">
-                    <h3>Visão</h3>
-                    <p>Alcançar a cada módulo um número maior de vidas através dos seus dons. Ampliar a Igreja na edificação da fé promovendo o crescimento espiritual dos membros.</p>
-                </div>
-            </div>
+                <div class="about-content">
+                    <span class="section-tag">Quem Somos</h3></span>
+                    <h2>Instituto Ministerial <span>Vida na Vida</span></h2>
+                    <p
+                        style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                        O Instituto Vida na Vida nasceu para preparar pessoas para servir a Deus com amor, excelência e
+                        compromisso. Inspirado pela visão da Pastora Sônia Resende, tem como propósito capacitar vidas
+                        por meio do ensino da Palavra, do desenvolvimento ministerial e da formação de discípulos
+                        comprometidos com o Reino de Deus.
+                    </p>
 
-            <div class="modal-card-item">
-                <div class="modal-card-icon">
-                    <i class="fa-solid fa-heart"></i>
+                    <p
+                        style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                        Desde a criação da Escola Ministerial, em 2 de agosto de 2025, o instituto oferece cursos
+                        gratuitos e acessíveis, ministrados por voluntários, promovendo conhecimento, crescimento
+                        espiritual e preparo para o serviço cristão.
+                    </p>
+
+                    <p
+                        style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                        Mais do que uma escola, somos um centro de formação que prepara vidas para cuidar de vidas,
+                        fortalecendo a Igreja e contribuindo para a expansão do Reino de Deus.
+                    </p>
+                    <!-- Novo Bloco: Card Único que funciona como Botão para o Pop-up -->
+                    <button type="button" class="mvv-trigger-btn" id="openMvvModal">
+                        <span class="mvv-item"><i class="fa-solid fa-circle-plus"></i> Missão</span>
+                        <span class="mvv-divider">|</span>
+                        <span class="mvv-item"><i class="fa-solid fa-lightbulb"></i> Visão</span>
+                        <span class="mvv-divider">|</span>
+                        <span class="mvv-item"><i class="fa-solid fa-heart"></i> Valores</span>
+                    </button>
                 </div>
-                <div class="modal-card-text">
-                    <h3>Valores</h3>
-                    <p>Nossos valores refletem os ensinamentos de Jesus e a natureza de Deus, buscando inspirar vidas e orientar a comunidade cristã em suas ações e relacionamentos sempre voltados para o amor.</p>
-                </div>
+
             </div>
         </div>
-    </div>
-</div>
 
-</section>
+        <div id="mvvModal" class="mvv-modal">
+            <div class="mvv-modal-content">
+                <button class="mvv-modal-close" id="closeMvvModal" aria-label="Fechar Pop-up">&times;</button>
 
-<!-- ==========================================================
+                <h2 class="modal-main-title">Diretrizes Institucionais</h2>
+
+                <div class="modal-cards-container">
+                    <div class="modal-card-item">
+                        <div class="modal-card-icon">
+                            <i class="fa-solid fa-cross"></i>
+                        </div>
+                        <div class="modal-card-text">
+                            <h3>Missão</h3>
+                            <p>Capacitar pessoas para cuidar de vidas e servir ao Reino de Deus, fundamentadas na
+                                Palavra, desenvolvendo habilidades ministeriais e uma vida profunda com Deus, por meio
+                                de cursos gratuitos ministrados por voluntários da igreja.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-card-item">
+                        <div class="modal-card-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="modal-card-text">
+                            <h3>Visão</h3>
+                            <p>Alcançar a cada módulo um número maior de vidas através dos seus dons. Ampliar a Igreja
+                                na edificação da fé promovendo o crescimento espiritual dos membros.</p>
+                        </div>
+                    </div>
+
+                    <div class="modal-card-item">
+                        <div class="modal-card-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="modal-card-text">
+                            <h3>Valores</h3>
+                            <p>Nossos valores refletem os ensinamentos de Jesus e a natureza de Deus, buscando inspirar
+                                vidas e orientar a comunidade cristã em suas ações e relacionamentos sempre voltados
+                                para o amor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ==========================================================
      POP-UP MODAL (Missão, Visão e Valores)
 =========================================================== -->
-<div id="mvvModal" class="mvv-modal">
-    <div class="mvv-modal-content">
-        <button class="mvv-modal-close" id="closeMvvModal">&times;</button>
-        
-        <h2 class="modal-main-title">Diretrizes Institucionais</h2>
-        
-        <div class="modal-cards-container">
-            <!-- Card Missão -->
-            <div class="modal-card-item">
-                <div class="modal-card-icon"><i class="fa-solid fa-circle-plus"></i></div>
-                <div class="modal-card-text">
-                    <h3>Missão</h3>
-                    <p>Capacitar pessoas para cuidar de vidas e servir ao Reino de Deus, fundamentadas na Palavra, desenvolvendo habilidades ministeriais e uma vida profunda com Deus, por meio de cursos gratuitos ministrados por voluntários da igreja.</p>
-                </div>
-            </div>
+    <div id="mvvModal" class="mvv-modal">
+        <div class="mvv-modal-content">
+            <button class="mvv-modal-close" id="closeMvvModal">&times;</button>
 
-            <!-- Card Visão -->
-            <div class="modal-card-item">
-                <div class="modal-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
-                <div class="modal-card-text">
-                    <h3>Visão</h3>
-                    <p>Alcançar a cada módulo um número maior de vidas através dos seus dons. Ampliar a Igreja na edificação da fé promovendo o crescimento espiritual dos membros.</p>
-                </div>
-            </div>
+            <h2 class="modal-main-title">Diretrizes Institucionais</h2>
 
-            <!-- Card Valores -->
-            <div class="modal-card-item">
-                <div class="modal-card-icon"><i class="fa-solid fa-heart"></i></div>
-                <div class="modal-card-text">
-                    <h3>Valores</h3>
-                    <p>Nossos valores refletem os ensinamentos de Jesus e a natureza de Deus, buscando inspirar vidas e orientar a comunidade cristã em suas ações e relacionamentos sempre voltados para o amor.</p>
+            <div class="modal-cards-container">
+                <!-- Card Missão -->
+                <div class="modal-card-item">
+                    <div class="modal-card-icon"><i class="fa-solid fa-circle-plus"></i></div>
+                    <div class="modal-card-text">
+                        <h3>Missão</h3>
+                        <p>Capacitar pessoas para cuidar de vidas e servir ao Reino de Deus, fundamentadas na Palavra,
+                            desenvolvendo habilidades ministeriais e uma vida profunda com Deus, por meio de cursos
+                            gratuitos ministrados por voluntários da igreja.</p>
+                    </div>
+                </div>
+
+                <!-- Card Visão -->
+                <div class="modal-card-item">
+                    <div class="modal-card-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="modal-card-text">
+                        <h3>Visão</h3>
+                        <p>Alcançar a cada módulo um número maior de vidas através dos seus dons. Ampliar a Igreja na
+                            edificação da fé promovendo o crescimento espiritual dos membros.</p>
+                    </div>
+                </div>
+
+                <!-- Card Valores -->
+                <div class="modal-card-item">
+                    <div class="modal-card-icon"><i class="fa-solid fa-heart"></i></div>
+                    <div class="modal-card-text">
+                        <h3>Valores</h3>
+                        <p>Nossos valores refletem os ensinamentos de Jesus e a natureza de Deus, buscando inspirar
+                            vidas e orientar a comunidade cristã em suas ações e relacionamentos sempre voltados para o
+                            amor.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<section class="features" id="diferenciais">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Nossos Diferenciais</span>
-            <h2>Por que escolher o <span>Instituto Vida na Vida?</span></h2>
-            <p><h3>Nosso compromisso é oferecer uma formação bíblica consistente, fundamentada nas Escrituras e voltada ao desenvolvimento espiritual e ministerial de cada aluno.</h3></p>
+    <section class="features" id="diferenciais">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Nossos Diferenciais</span>
+                <h2>Por que escolher o <span>Instituto Vida na Vida?</span></h2>
+                <p>
+                <h3>Nosso compromisso é oferecer uma formação bíblica consistente, fundamentada nas Escrituras e voltada
+                    ao desenvolvimento espiritual e ministerial de cada aluno.</h3>
+                </p>
+            </div>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-book-bible"></i></div>
+                    <h3>Base Bíblica Sólida</h3>
+                    <p
+                        style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
+                        Todos os cursos são fundamentados nas Escrituras, proporcionando conhecimento teológico
+                        consistente e aplicação prática.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-user-graduate"></i></div>
+                    <h3>Professores Capacitados</h3>
+                    <p
+                        style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
+                        Corpo docente preparado para transmitir conhecimento com excelência, experiência ministerial e
+                        compromisso com a Palavra de Deus.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Crescimento Espiritual</h3>
+                    <p
+                        style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
+                        Mais do que informação, buscamos transformação de vidas através do discipulado e do
+                        relacionamento com Cristo.</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-dove"></i></div>
+                    <h3>Capacitação Ministerial</h3>
+                    <p
+                        style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
+                        Formação direcionada para aqueles que desejam servir ao Reino de Deus com excelência, sabedoria
+                        e propósito.</p>
+                </article>
+            </div>
         </div>
-        <div class="features-grid">
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-book-bible"></i></div>
-                <h3>Base Bíblica Sólida</h3>
-                <p style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
-				Todos os cursos são fundamentados nas Escrituras, proporcionando conhecimento teológico consistente e aplicação prática.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-user-graduate"></i></div>
-                <h3>Professores Capacitados</h3>
-                <p style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
-				Corpo docente preparado para transmitir conhecimento com excelência, experiência ministerial e compromisso com a Palavra de Deus.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
-                <h3>Crescimento Espiritual</h3>
-                <p style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
-				Mais do que informação, buscamos transformação de vidas através do discipulado e do relacionamento com Cristo.</p>
-            </article>
-            <article class="feature-card">
-                <div class="feature-icon"><i class="fa-solid fa-dove"></i></div>
-                <h3>Capacitação Ministerial</h3>
-                <p style="font-size: 1.15rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
-				Formação direcionada para aqueles que desejam servir ao Reino de Deus com excelência, sabedoria e propósito.</p>
-            </article>
+    </section>
+
+    <section class="courses" id="cursos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Formação Ministerial</span>
+                <h2>Conheça nossos <span>Cursos</span></h2>
+                <p>
+                <h3>Escolha o curso que melhor atende ao seu momento ministerial para ver detalhes, investimento e
+                    realizar sua inscrição.</h3>
+                </p>
+            </div>
+
+            <div class="courses-grid">
+
+                <a href="cursos/biblia-1.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/biblia1.png" alt="Curso Bíblia I Panorama">
+                        <span class="course-category">Formação Bíblica</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Bíblia I Panorama</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Panorama Bíblico e fundamentos essenciais das Escrituras Sagradas.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/curada-para-curar.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/curadas.png" alt="Curso Curadas para Curar">
+                        <span class="course-category">Identidade & Restauração</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Curadas para Curar</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Uma jornada profunda de cura interior, restauração da alma e identidade.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/lideranca.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/lideranca.png" alt="Curso de Liderança">
+                        <span class="course-category">Ministério</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Curso de Liderança</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Desenvolvimento de líderes com princípios bíblicos e gestão ministerial.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/intercessao.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/intercessao.png" alt="Curso Intercessão">
+                        <span class="course-category">Espiritualidade</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Curso Intercessão</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Fundamentos da oração eficaz, batalha espiritual e intercessão estratégica.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/capacita-kids.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/kids.png" alt="Curso Capacita Kids">
+                        <span class="course-category">Ministério Infantil</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Curso Capacita Kids</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Treinamento especializado para evangelismo e discipulado de crianças.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/midia.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/midia.png" alt="Curso de Mídia">
+                        <span class="course-category">Comunicação</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Curso de Mídia</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Capacitação técnica e ministerial para transmissão, som e projeção na igreja.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+
+            <hr class="courses-separator">
+
+            <div class="section-header module-two-header">
+                <h2>Cursos <span>Módulo 2</span></h2>
+                <p>
+                <h3>Aprofundamento teológico e ministerial prático para alunos egressos do Módulo 1.</h3>
+                </p>
+            </div>
+
+            <div class="courses-grid">
+
+                <a href="cursos/biblia-2.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/biblia2.png" alt="Curso Bíblia II">
+                        <span class="course-category">Formação Bíblica Avançada</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Bíblia II</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Estudo aprofundado de um tema específico teológico das doutrinas bíblicas.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/curadas-para-curar-2.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/curadas2.png" alt="Curso Curadas para Curar 2">
+                        <span class="course-category">Identidade Avançado</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Curadas para Curar II</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Consolidação da cura interior e ferramentas práticas para ministrar a outros.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="cursos/intercessao-2.html" class="course-card">
+                    <div class="course-image">
+                        <img src="assets/images/cursos/intercessao2.png" alt="Curso Intercessão II">
+                        <span class="course-category">Espiritualidade Avançada</span>
+                    </div>
+                    <div class="course-content">
+                        <h3>Intercessão II</h3>
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">
+                            Mentoria prática e mapeamento espiritual para equipes de intercessão.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
+                        </ul>
+                        <span class="course-button">Ver Detalhes e Inscrição <i
+                                class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="courses" id="cursos">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Formação Ministerial</span>
-            <h2>Conheça nossos <span>Cursos</span></h2>
-            <p><h3>Escolha o curso que melhor atende ao seu momento ministerial para ver detalhes, investimento e realizar sua inscrição.</h3></p>
-        </div>
-
-        <div class="courses-grid">
-            
-            <a href="cursos/biblia-1.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/biblia1.png" alt="Curso Bíblia I Panorama">
-                    <span class="course-category">Formação Bíblica</span>
-                </div>
-                <div class="course-content">
-                    <h3>Bíblia I Panorama</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Panorama Bíblico e fundamentos essenciais das Escrituras Sagradas.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/curada-para-curar.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/curadas.png" alt="Curso Curadas para Curar">
-                    <span class="course-category">Identidade & Restauração</span>
-                </div>
-                <div class="course-content">
-                    <h3>Curadas para Curar</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Uma jornada profunda de cura interior, restauração da alma e identidade.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/lideranca.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/lideranca.png" alt="Curso de Liderança">
-                    <span class="course-category">Ministério</span>
-                </div>
-                <div class="course-content">
-                    <h3>Curso de Liderança</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Desenvolvimento de líderes com princípios bíblicos e gestão ministerial.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/intercessao.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/intercessao.png" alt="Curso Intercessão">
-                    <span class="course-category">Espiritualidade</span>
-                </div>
-                <div class="course-content">
-                    <h3>Curso Intercessão</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Fundamentos da oração eficaz, batalha espiritual e intercessão estratégica.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/capacita-kids.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/kids.png" alt="Curso Capacita Kids">
-                    <span class="course-category">Ministério Infantil</span>
-                </div>
-                <div class="course-content">
-                    <h3>Curso Capacita Kids</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Treinamento especializado para evangelismo e discipulado de crianças.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/midia.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/midia.png" alt="Curso de Mídia">
-                    <span class="course-category">Comunicação</span>
-                </div>
-                <div class="course-content">
-                    <h3>Curso de Mídia</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Capacitação técnica e ministerial para transmissão, som e projeção na igreja.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-        </div>
-
-        <hr class="courses-separator">
-        
-        <div class="section-header module-two-header">
-            <h2>Cursos <span>Módulo 2</span></h2>
-            <p><h3>Aprofundamento teológico e ministerial prático para alunos egressos do Módulo 1.</h3></p>
-        </div>
-
-        <div class="courses-grid">
-
-            <a href="cursos/biblia-2.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/biblia2.png" alt="Curso Bíblia II">
-                    <span class="course-category">Formação Bíblica Avançada</span>
-                </div>
-                <div class="course-content">
-                    <h3>Bíblia II</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Estudo aprofundado de um tema específico teológico das doutrinas bíblicas.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/curadas-para-curar-2.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/curadas2.png" alt="Curso Curadas para Curar 2">
-                    <span class="course-category">Identidade Avançado</span>
-                </div>
-                <div class="course-content">
-                    <h3>Curadas para Curar II</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Consolidação da cura interior e ferramentas práticas para ministrar a outros.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-            <a href="cursos/intercessao-2.html" class="course-card">
-                <div class="course-image">
-                    <img src="assets/images/cursos/intercessao2.png" alt="Curso Intercessão II">
-                    <span class="course-category">Espiritualidade Avançada</span>
-                </div>
-                <div class="course-content">
-                    <h3>Intercessão II</h3>
-                    <p style="font-size: 1.2rem; line-height: 1.5; color: #334155; margin-bottom: 1.25rem; text-align: justify;">Mentoria prática e mapeamento espiritual para equipes de intercessão.</p>
-                    <ul>
-                        <li><i class="fa-solid fa-circle-check"></i> Certificado</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Material Didático Digital</li>
-                        <li><i class="fa-solid fa-circle-check"></i> Aulas Presenciais</li>
-                    </ul>
-                    <span class="course-button">Ver Detalhes e Inscrição <i class="fa-solid fa-arrow-right"></i></span>
-                </div>
-            </a>
-
-        </div>
-    </div>
-</section>
-
-<!-- ESTA LINHA ESTÁ COMO COMENTÁRIO FOI DESABILITADA NO INDEX <section class="testimonials" id="depoimentos">
+    <!-- ESTA LINHA ESTÁ COMO COMENTÁRIO FOI DESABILITADA NO INDEX <section class="testimonials" id="depoimentos">
     <div class="container">
         <div class="section-header">
             <span class="section-tag">Depoimentos</span>
@@ -559,171 +628,297 @@
     </div>
 </section> FECHANDO SEÇÃO DESABILITADA-->
 
-<!-- ==========================================================
+    <!-- ==========================================================
      FAQ
 =========================================================== -->
-<section class="faq" id="faq">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-tag">Perguntas Frequentes</span>
-            <h2>Tire suas <span>Dúvidas</span></h2>
-            <p style="font-size: 1.3rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">Reunimos as principais perguntas para facilitar sua decisão e tornar sua experiência ainda melhor.</p>
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Perguntas Frequentes</span>
+                <h2>Tire suas <span>Dúvidas</span></h2>
+                <p
+                    style="font-size: 1.3rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: center;">
+                    Reunimos as principais perguntas para facilitar sua decisão e tornar sua experiência ainda melhor.
+                </p>
+            </div>
+
+            <div class="faq-container">
+                <!-- ITEM 1 -->
+                <article class="faq-item active">
+                    <button class="faq-question">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
+                            Quem pode fazer os cursos?
+                        </p>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
+                            Os cursos são destinados a homens e mulheres com idade mínima de 16 anos que desejam
+                            aprofundar seus conhecimentos bíblicos, desenvolver seu ministério e crescer
+                            espiritualmente.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 2 -->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
+                            Preciso ser membro da Igreja Metodista Familia do Amor em Vila Nova?
+                        </p>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
+                            Não necessariamente, você precisa ser membro de uma Igreja Metodista, os cursos oferecidos
+                            são para que você desenvolva seu ministerio e crescimento no reino.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 3 -->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
+                            Os cursos possuem certificado?
+                        </p>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
+                            Sim. Os alunos que cumprirem os requisitos estabelecidos pelo Instituto receberão
+                            certificado de conclusão.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 4 -->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
+                            Como faço minha matrícula?
+                        </p>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
+                            Basta clicar no botão "Quero Fazer Minha Inscrição" escolher o curso que deseja, você verá a
+                            descrição do curso e detealhes sobre aulas, horários.Para efetuar a matricula você clica no
+                            botão fazer Matricula.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- ITEM 5 -->
+                <article class="faq-item">
+                    <button class="faq-question">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
+                            Qual é a duração dos cursos?
+                        </p>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p
+                            style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
+                            A duração é de 14 semanas com 1h15 de aula semanal. Todas as informações estarão disponíveis
+                            na página específica de cada curso.
+                        </p>
+                    </div>
+                </article>
+            </div>
         </div>
-
-        <div class="faq-container">
-            <!-- ITEM 1 -->
-            <article class="faq-item active">
-                <button class="faq-question">
-                    <p style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
-					Quem pode fazer os cursos?
-					</p>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
-					Os cursos são destinados a homens e mulheres com idade mínima de 16 anos que desejam aprofundar seus conhecimentos bíblicos, desenvolver seu ministério e crescer espiritualmente.
-					</p>
-                </div>
-            </article>
-
-            <!-- ITEM 2 -->
-            <article class="faq-item">
-                <button class="faq-question">
-				    <p style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
-                    Preciso ser membro da Igreja Metodista Familia do Amor em Vila Nova?
-					</p>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
-					Não necessariamente, você precisa ser membro de uma Igreja Metodista, os cursos oferecidos são para que você desenvolva seu ministerio e crescimento no reino.
-					</p>
-                </div>
-            </article>
-
-            <!-- ITEM 3 -->
-            <article class="faq-item">
-                <button class="faq-question">
-				    <p style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
-                    Os cursos possuem certificado?
-					</p>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
-					Sim. Os alunos que cumprirem os requisitos estabelecidos pelo Instituto receberão certificado de conclusão.
-					</p>
-                </div>
-            </article>
-
-            <!-- ITEM 4 -->
-            <article class="faq-item">
-                <button class="faq-question">
-				    <p style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
-                    Como faço minha matrícula?
-					</p>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
-					Basta clicar no botão "Quero Fazer Minha Inscrição" escolher o curso que deseja, você verá a descrição do curso e detealhes sobre aulas, horários.Para efetuar a matricula você clica no botão fazer Matricula.
-					</p>
-                </div>
-            </article>
-
-            <!-- ITEM 5 -->
-            <article class="faq-item">
-                <button class="faq-question">
-				    <p style="font-size: 1.2rem; line-height: 1; color: #334155; margin-bottom:0rem; text-align: left;">
-                    Qual é a duração dos cursos?
-					</p>
-                    <i class="fa-solid fa-plus"></i>
-                </button>
-                <div class="faq-answer">
-                    <p style="font-size: 1.2rem; line-height: 1.3; color: #334155; margin-bottom: 1.25rem; text-align: left;">
-					A duração é de 14 semanas com 1h15 de aula semanal. Todas as informações estarão disponíveis na página específica de cada curso.
-					</p>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
+    </section>
 
 
-<footer class="footer" id="contato">
-    <div class="container footer-container-center">
-        
-        <div class="footer-brand-center">
-            <img src="assets/images/logo-footer.png" alt="Instituto Ministerial Vida na Vida" class="footer-logo">
-            <p class="footer-description">
-                Capacitando homens e mulheres através de uma formação bíblica sólida, preparando líderes para servir ao Reino de Deus com excelência.
-            </p>
-        </div>
+    <footer class="footer" id="contato">
+        <div class="container footer-container-center">
 
-        
-        <!-- DESABILITADO ESSE BLOCO <div class="footer-map-center">
+            <div class="footer-brand-center">
+                <img src="assets/images/logo-footer.png" alt="Instituto Ministerial Vida na Vida" class="footer-logo">
+                <p class="footer-description">
+                    Capacitando homens e mulheres através de uma formação bíblica sólida, preparando líderes para servir
+                    ao Reino de Deus com excelência.
+                </p>
+            </div>
+
+
+            <!-- DESABILITADO ESSE BLOCO <div class="footer-map-center">
             <iframe src="COLE_AQUI_O_LINK_DO_GOOGLE_MAPS" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div> DESABILITADO O MAPA DO GOOGLE -->
 
-        <div class="footer-bottom-center">
-            <p>© 2026 Instituto Ministerial Vida na Vida. Todos os direitos reservados.</p>
-            <p>Desenvolvido por Adeilton Moreira | Olhares Design.</p>
+            <div class="footer-bottom-center">
+                <p>© 2026 Instituto Ministerial Vida na Vida. Todos os direitos reservados.</p>
+                <p>Desenvolvido por Adeilton Moreira | Olhares Design.</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/main.js"></script>
+
+<!--POP-UP QUE APARECE ENTRE AS DATAS DE MATRICULA CHAMANDO A ATENÇÃO PARA FAZERM A MATRICULA-->
+<div id="custom-popup-overlay" class="ivv-popup-overlay" style="display: none;">
+    <div class="ivv-popup-content">
+        
+        <img src="assets/images/instituto_popup1.png" alt="Instituto Vida na Vida" class="ivv-popup-img">
+        
+        <div class="ivv-popup-body">
+            <h2 class="ivv-title-chamada">FAÇA JÁ SUA MATRÍCULA!</h2>
+            <h2><p class="ivv-text-urgencia" >As vagas são limitadas e o prazo está terminando. Garanta sua formação Mídiainisterial:</p></h2>
+            
+            <div id="popup-countdown" class="ivv-countdown-container">
+                <div class="countdown-box"><span id="days">00</span><label><h2>Dias</h2></label></div>
+                <div class="countdown-box"><span id="hours">00</span><label><h2>Horas</h2></label></div>
+                <div class="countdown-box"><span id="minutes">00</span><label><h2>Min</h2></label></div>
+                <div class="countdown-box"><span id="seconds">00</span><label><h2>Seg</h2></label></div>
+            </div>
+
+            <a href="#cursos" id="btn-ver-cursos" class="ivv-btn-primary">VER CURSOS</a>
         </div>
 
+        <div class="ivv-popup-footer">
+            <label class="ivv-checkbox-label">
+                <input type="checkbox" id="dont-show-again"> Não mostrar novamente nesta sessão
+            </label>
+            <button id="btn-entendi" class="ivv-btn-secondary">Entendi</button>
+        </div>
     </div>
-</footer>
-
-<button id="backToTop"><i class="fas fa-arrow-up"></i></button>
-
-<script src="assets/js/animation.js"></script>
-<script src="assets/js/main.js"></script>
-</body>
+</div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const popup = document.getElementById("popup-matricula");
-    const btnClose = document.getElementById("btn-close-popup");
-    const btnEntendi = document.getElementById("btn-entendi-popup");
-    const chkDontShow = document.getElementById("chk-dont-show-again");
+(function() {
+    function inicializarPopup() {
+        // ================= CONFIGURAÇÕES DE DATAS DA CAMPANHA =================
+        const DATA_INICIAL   = new Date("2026-07-12T00:00:00");
+        const DATA_FINAL     = new Date("2026-07-31T23:59:59"); 
+        // ======================================================================
 
-    // 1. Definição da data limite (12 de Julho de 2026 às 00:00:00)
-    // Nota: Em JavaScript, os meses começam em 0 (Janeiro = 0, Julho = 6)
-    const dataLimite = new Date(2026, 6, 12, 0, 0, 0);
-    const dataAtual = new Date();
+        const dataAtual = new Date();
+        const ocultoNaSessao = sessionStorage.getItem("popup_oculto");
 
-    // 2. Condicional de exibição: Só executa se a data atual for MENOR que a data limite
-    // E se o usuário não tiver marcado a opção de ocultar nesta sessão
-    if (dataAtual < dataLimite) {
-        if (!sessionStorage.getItem("hideMatriculaPopup")) {
-            // Exibe o pop-up com um pequeno atraso de 800ms para suavidade visual
-            setTimeout(() => {
-                popup.style.display = "flex";
-            }, 800);
+        // VALIDAÇÃO CRÍTICA DO PERÍODO SOLICITADO
+        if (dataAtual >= DATA_INICIAL && dataAtual <= DATA_FINAL && !ocultoNaSessao) {
+            var overlay = document.getElementById("custom-popup-overlay");
+            if (!overlay) return;
+
+            // Exibe o pop-up alterando o estilo para flex
+            overlay.style.display = "flex";
+
+            var btnEntendi = document.getElementById("btn-entendi");
+            var btnVerCursos = document.getElementById("btn-ver-cursos");
+            var checkbox = document.getElementById("dont-show-again");
+
+            // ---- FUNÇÃO DO CONTADOR REGRESSIVO ----
+            function renderizarTimer() {
+                var agora = new Date().getTime();
+                var dif = DATA_FINAL.getTime() - agora;
+
+                if (dif <= 0) {
+                    document.getElementById("popup-countdown").innerHTML = "<b style='color:#cc0000; font-size:16px;'>MATRÍCULAS ENCERRADAS!</b>";
+                    clearInterval(intervaloTimer);
+                    return;
+                }
+
+                var d = Math.floor(dif / (1000 * 60 * 60 * 24));
+                var h = Math.floor((dif % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var m = Math.floor((dif % (1000 * 60 * 60)) / (1000 * 60));
+                var s = Math.floor((dif % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerText    = d < 10 ? "0" + d : d;
+                document.getElementById("hours").innerText   = h < 10 ? "0" + h : h;
+                document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
+                document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
+            }
+
+            renderizarTimer();
+            var intervaloTimer = setInterval(renderizarTimer, 1000);
+
+            // Ações de fechamento
+            function fechar() {
+                if (checkbox.checked) {
+                    sessionStorage.setItem("popup_oculto", "true");
+                }
+                overlay.style.display = "none";
+                clearInterval(intervaloTimer);
+            }
+
+            btnEntendi.addEventListener("click", fechar);
+            btnVerCursos.addEventListener("click", fechar);
         }
+    }
+
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        inicializarPopup();
     } else {
-        // Garante que o elemento permaneça oculto caso o CSS padrão falhe
-        popup.style.display = "none";
+        window.addEventListener("load", inicializarPopup);
     }
+})();
+</script>
 
-    // Função para fechar o pop-up e salvar a preferência de sessão
-    function fecharPopup() {
-        if (chkDontShow.checked) {
-            sessionStorage.setItem("hideMatriculaPopup", "true");
+
+
+
+    
+</body>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const popup = document.getElementById("popup-matricula");
+        const btnClose = document.getElementById("btn-close-popup");
+        const btnEntendi = document.getElementById("btn-entendi-popup");
+        const chkDontShow = document.getElementById("chk-dont-show-again");
+
+        // 1. Definição da data limite (12 de Julho de 2026 às 00:00:00)
+        // Nota: Em JavaScript, os meses começam em 0 (Janeiro = 0, Julho = 6)
+        const dataLimite = new Date(2026, 6, 12, 0, 0, 0);
+        const dataAtual = new Date();
+
+        // 2. Condicional de exibição: Só executa se a data atual for MENOR que a data limite
+        // E se o usuário não tiver marcado a opção de ocultar nesta sessão
+        if (dataAtual < dataLimite) {
+            if (!sessionStorage.getItem("hideMatriculaPopup")) {
+                // Exibe o pop-up com um pequeno atraso de 800ms para suavidade visual
+                setTimeout(() => {
+                    popup.style.display = "flex";
+                }, 800);
+            }
+        } else {
+            // Garante que o elemento permaneça oculto caso o CSS padrão falhe
+            popup.style.display = "none";
         }
-        popup.style.display = "none";
-    }
 
-    // Eventos de clique para fechar
-    btnClose.addEventListener("click", fecharPopup);
-    btnEntendi.addEventListener("click", fecharPopup);
-
-    // Fecha o pop-up se o usuário clicar na área escura (fora do card)
-    popup.addEventListener("click", function(e) {
-        if (e.target === popup) {
-            fecharPopup();
+        // Função para fechar o pop-up e salvar a preferência de sessão
+        function fecharPopup() {
+            if (chkDontShow.checked) {
+                sessionStorage.setItem("hideMatriculaPopup", "true");
+            }
+            popup.style.display = "none";
         }
+
+        // Eventos de clique para fechar
+        btnClose.addEventListener("click", fecharPopup);
+        btnEntendi.addEventListener("click", fecharPopup);
+
+        // Fecha o pop-up se o usuário clicar na área escura (fora do card)
+        popup.addEventListener("click", function (e) {
+            if (e.target === popup) {
+                fecharPopup();
+            }
+        });
     });
-});
 </script>
 
 </html>
