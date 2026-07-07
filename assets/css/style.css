@@ -3090,3 +3090,153 @@ transform:translateY(-6px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3) !important;
     padding: 30px 24px !important;
 }
+
+
+
+/* CSS PARA USAR NO POP-PU DE CHAMAR A ATENÇÃO PARA FAZER A MATRICULA COM TIMER REGRESSIVO */
+
+/* Overlay de Fundo */
+.ivv-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Caixa Principal do Pop-up com Cantos Arredondados */
+.ivv-popup-content {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 480px;
+    border-radius: 16px; /* Cantos arredondados exigidos */
+    overflow: hidden; /* Garante que a imagem siga o arredondamento */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    animation: ivvFadeIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Imagem do Diretório */
+.ivv-popup-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Corpo do Pop-up (Conteúdo Técnico/Apelo) */
+.ivv-popup-body {
+    padding: 24px 24px 16px 24px;
+    text-align: center;
+}
+
+.ivv-title-chamada {
+    color: #cc0000; /* Vermelho Fogo extraído da logo */
+    font-size: 24px;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    letter-spacing: 1px;
+}
+
+.ivv-text-urgencia {
+    color: #333333;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 20px 0;
+}
+
+/* Estilização do Contador Regressivo */
+.ivv-countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.countdown-box {
+    background-color: #0c435c; /* Azul Petróleo Escuro extraído da logo */
+    color: #ffffff;
+    min-width: 65px;
+    padding: 10px 4px;
+    border-radius: 8px;
+    border-bottom: 3px solid #c29b53; /* Detalhe em Dourado da logo */
+}
+
+.countdown-box span {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.countdown-box label {
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #e0e0e0;
+    margin-top: 2px;
+}
+
+/* Botão Principal: Ver Cursos */
+.ivv-btn-primary {
+    display: inline-block;
+    background-color: #cc0000; /* Vermelho Alerta/Chamada */
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 32px;
+    border-radius: 30px;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 4px 12px rgba(204, 0, 0, 0.3);
+    width: 80%;
+}
+
+.ivv-btn-primary:hover {
+    background-color: #a30000;
+    transform: translateY(-1px);
+}
+
+/* Rodapé de Fechamento */
+.ivv-popup-footer {
+    background-color: #f8f9fa;
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eeeeee;
+}
+
+.ivv-checkbox-label {
+    font-size: 12px;
+    color: #666666;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ivv-btn-secondary {
+    background: none;
+    border: none;
+    color: #0c435c;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.ivv-btn-secondary:hover {
+    background-color: #e9ecef;
+}
+
+/* Animação */
+@keyframes ivvFadeIn {
+    from { opacity: 0; transform: scale(0.92); }
+    to { opacity: 1; transform: scale(1); }
+}
