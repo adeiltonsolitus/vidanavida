@@ -166,11 +166,11 @@
     </div>
 </footer>
 
-<!--  <script>
+<script>
 function verificarInscricao(event) {
     // Definição dos marcos temporais (Julho é o mês 6 no JS)
     const dataInicio = new Date(2026, 6, 12, 0, 0, 0);  // 12 de Julho de 2026
-    const dataFim    = new Date(2026, 6, 31, 23, 59, 59); // 31 de Julho de 2026
+    const dataFim    = new Date(2026, 7, 4, 23, 59, 59); // 4 de Agosto de 2026
     const dataAtual  = new Date();
 
     const modal = document.getElementById("modal-alerta-inscricao");
@@ -196,7 +196,7 @@ function verificarInscricao(event) {
         // Configura o conteúdo para após o período
         icone.className = "fa-solid fa-calendar-xmark";
         titulo.innerText = "Período Encerrado";
-        texto.innerHTML = "O período de inscrições para este módulo se encerrou no dia 31 de Julho de 2026.";
+       texto.innerHTML = "O período de inscrições para este módulo se encerrou no dia 04 de Agosto de 2026.";
         agradecimento.innerText = "Agradecemos pelo seu interesse. Que Deus abençoe a sua vida.";
         
         modal.style.display = "flex";
